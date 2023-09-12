@@ -1,0 +1,30 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>intro</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="main">
+    <div id="contents">
+    <h1 style="font-family: 'KCCMurukmuruk';">
+      나의 여름방학 일기장
+    </h1> 
+
+    {% if login_session %}
+      {% comment %} <button onclick="location.href='diary/'">눌러 시작하기</button> {% endcomment %}
+       <button><a
+          href="{% url 'mydiary' user %}"
+          style="line-height: 15px; text-decoration: none; color: white; font-family: 'KCCMurukmuruk';"
+          {% comment %} target="_blank" {% endcomment %}
+          >다이어리 이동</a
+        ></button>
+    {% else %}
+      <button onclick="location.href='accounts/login'" style="font-family: 'KCCMurukmuruk';">눌러 시작하기</button>
+    {% endif %}  
+</body>
+</body>
+</html>

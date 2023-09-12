@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원가입</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="modal-content">
+        <div class="signup-title">
+          <i class="fas fa-user-plus"></i>
+          <h3>회원 가입</h3>
+        </div>
+        <form action="" method="POST" id="signup-form">
+          {% csrf_token %}
+          <label for="signup-username">아이디 :</label>
+          <input
+            type="text"
+            id="signup-username"
+            name="username"
+            required
+          /><br /><br />
+
+          <label for="signup-password">비밀번호 :</label>
+          <input
+            type="password"
+            id="signup-password"
+            name="password1"
+            required
+          /><br /><br />
+
+          <label for="signup-confirm-password">비밀번호 확인 :</label>
+          <input
+            type="password"
+            id="signup-confirm-password"
+            name="password2"
+            required
+          /><br /><br />
+          <label for="vacation-period">방학기간 :</label>
+          <input
+            type="date"
+            id="vacation-startperiod"
+            name="start_period"
+            required
+          />
+          ~
+          <input
+            type="date"
+            id="vacation-finishperiod"
+            name="end_period"
+            required
+          /><br /><br /><br />
+
+          {% for form in forms %} {{ form.errors }} {% endfor %}
+
+          <button type="submit" value="회원 가입">회원가입</button>
+        </form>
+      </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

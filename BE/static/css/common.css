@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UhBeeSe_hyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+header h1{
+    margin-left: 20px;
+}
+
+header h1 span {
+    margin-left: 8%;
+    font-size: 20px;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+
+.fa-calendar {
+    color: #23a7db;
+    font-size: 40px;
+    margin: -30px -7% 0 55px;
+    vertical-align: middle;
+}
+
+#summarImage{
+    width: 400px;
+    height: 180px;
+    margin-right: 34px;
+    margin-top: -95px;
+}
+
+/*   btn   css   */
+.background-skyblue {
+    background-color: skyblue;
+}
+
+.background-white {
+  width: 97%;
+  height: 97%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 2%;
+}
+
+.input-form {
+    margin-top: -7%;
+    display: flex;
+    align-items: baseline;
+}
+
+.input-box {
+    margin-left: -15px;
+    flex: 1;
+    margin-right: 15px;
+    padding-right: 30px;
+}
+
+.clickBtn   {
+    margin-right:5%;
+    width: 47px;
+    height: 32px;
+    border-radius: 10%;
+    cursor:pointer;
+    border: none;
+    color: white;
+    background-color: skyblue;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'ChosunGu',sans-serif;
+    transition: background-color 0.5s;
+}
+
+.clickBtn:hover {
+    color:skyblue;
+}
+/*   header   */
+header   {
+    display:   flex;
+    padding:   10px;
+    height:   7%;
+    box-sizing:   border-box;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+}
+
+header   >   h1   {
+    display:inline-block;
+    height:   100%;
+    flex-grow:   1;
+}
+header    >    h1    >    span    {color:    black;    font-size:    35px;    font-weight:    500;    vertical-align:   
+bottom;}
+.calendar_title   {
+    display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 10%;
+ }
+.calendar_title   .prev   ,   .next{
+    width:   30px;
+    height:   100%;
+    cursor:   pointer;
+    border:   none;
+    font-size:   20px;
+    outline:   none;
+    background-color: white;
+    color: skyblue;
+    font-size: 40px;
+    font-weight: 600;
+    transition:color 0.7s
+}
+
+.calendar_title .prev:hover,
+.calendar_title .next:hover {
+    color: white; 
+  }
+.calendar_title .prev{
+    margin-right: 15px;
+}
+
+.calendar_title .next{
+    margin-left:15px;
+}
+
+
+
+.calendar_title   .current-year-month   {
+    font-size:   35px;
+    vertical-align:   middle;
+    display:   inline-block;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+/*   content   left   */
+.content-left   {
+    float:   left;
+    box-sizing:   border-box;
+    width:   20%;
+    margin-left: 2%;
+}
+.left-main   {margin-top:   20%;}
+.left-main   .main-wrap   {
+    text-align:   center;
+    font-weight:   700;
+}
+.left-main   .main-wrap   .main-day   {
+    margin-top: -15%;
+    font-size:   30px;
+    color:   skyblue;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+.left-main   .main-wrap   .main-date   {
+    
+    font-size:   70px;
+    color: #23a7db;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+.left-main   .todo-wrap   {padding:   7%   0  10%   10%;}
+.left-main   .todo-wrap   .todo-title   {
+    margin-left: -15px;
+    font-size:   27px;
+    font-weight:   600;
+    margin-bottom:   7%;
+    color:   #5c5c5c;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+.left-main   .todo-wrap   .input-form   .input-box   {
+    height:   50px;      font-size:   15.5px;
+    border:   0;
+    border-bottom:   2px   solid;
+    margin-bottom:   20px;
+    outline-style:   none;
+}
+
+/*   content   right   */
+.content-right   {
+    float:   right;
+    box-sizing:   border-box;
+    width:   75%;
+    margin-top: -20px;
+    margin-right: 2.5%;
+}
+.content-right   .day-of-week   {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px;
+    background:   rgba(135, 206, 235, 0.5);
+    width:   100%;
+    height: 50px;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+.content-right   .day-of-week   .dayHeader   {
+    display:   inline-block;
+    width:   calc(100%   /   7.2);
+
+    text-align:   center;
+    padding:   1%;
+    box-sizing:   border-box;
+    font-weight:   600;
+    font-size:   25px;
+}
+.content-right   .day-of-week   .dayHeader.sun   {color:   #f02f2f;}
+.content-right   .day-of-week   .dayHeader.sat   {color:   #2208e7; }
+/*   calendar   body      */
+#weekly   >   div   {
+    font-size: 25px;
+    box-sizing:   border-box;
+    text-align:   left;
+    width:   calc(100%   /   7);
+    height:   115px;
+    display:   inline-block;
+    border-bottom:   1px   solid   #e4e4e4;      vertical-align:   top;
+    padding:   1%;
+    color: black;
+    overflow-y:   auto;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+#weekly   >   div.active   {
+    background:   #e4e4e4;
+}
+#weekly   >   div   +   div{
+    border-left:   1px   solid   #e4e4e4;
+}
+.calendar-body   #weekly   >   div:first-child   {border-left:   1px   solid   #e4e4e4;}
+.calendar-body   #weekly   >   div:last-child   {border-right:   1px   solid   #e4e4e4;}
+
+/*   todoList   */
+.todoList   {
+    font-size:   17px;
+    overflow-y:scroll;
+    height: 100px;
+    margin-right: 10%;
+}
+
+.input-form input[type="text"]::placeholder {
+    font-size: 15.5px;
+    font-family: 'ChosunGu',sans-serif;
+}
+
+.input-box
+{
+    font-family: 'ChosunGu',sans-serif;
+}
+
+.todoList   >   li   {
+    position:   relative;
+    display: flex;
+    align-items: flex-start;  /*aligh-items:center였음*/
+    margin-bottom: 5%;
+
+}
+
+.todoList::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+.todoList::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: skyblue; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+.todoList{
+    font-family: 'ChosunGu',sans-serif;
+    font-size: 17px;
+}
+.todoList > li .checkbox {
+    margin-right: 5%;
+}
+.todoList   >   li   >   span{
+    width:   70%;
+    overflow:   hidden;
+    display:   block;
+    text-overflow:   ellipsis;
+}
+.todoList   >   li+li   {
+    margin-top:   5%;
+}
+.todoList   >   li   >   .del-data{
+    position:   absolute;
+    top:   0;   right:   5%;
+    width:   20%;
+    height:   25px;
+    background:   none;
+    border:   none;
+    font-size:   0px;
+}
+.todoList   >   li   >   .del-data::after,   .todoList   >   li   >   .del-data::before{      content:   '';
+    position:   absolute;
+    top:0;   left:   50%;
+    display:   block;
+    width:   4px;
+    height:   18px;
+    background:   #23a7db;
+}
+.todoList   >   li   >   .del-data::after,   .closed::after   {transform:   rotate(45deg);}
+.todoList   >   li   >   .del-data::before,   .closed::before{transform:   rotate(-45deg);}
+.showList   {
+    display:   none;
+    position:   absolute;
+    top:   50%;
+    left:   50%;
+    transform:   translate(-50%,   -50%);
+    background:   skyblue;
+    width:   400px;
+    height:   300px;
+    z-index:   1;
+    border-radius:   20px;
+    overflow:   hidden;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+}
+
+/*summar vacation bucket list*/
+.container{
+    width: 90%;
+    background-color:  rgba(135, 206, 235, 0.5);
+    border-radius: 5%;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -15%;
+    height: 260px;
+}
+#bucketList {
+    list-style: decimal;
+    font-family: 'ChosunGu',sans-serif;
+    font-size: 17px;
+  }
+  
+#bucketItem{
+    border: none;
+    background: none;
+    border-bottom: 4px dashed skyblue;
+    height: 27px;
+    margin-right: 12px;
+    margin-left: 20px;
+    width: 70%;
+    font-family: 'ChosunGu',sans-serif;
+    font-size: 17px;
+}
+
+#bucketItem:focus {
+    outline: none;
+    font-family: 'ChosunGu',sans-serif;
+    font-size: 17px;
+  }
+  
+
+.input-container input[type="text"]::placeholder {
+    font-size: 15.5px;
+}
+
+
+#addButton{
+    width: 47px;
+    height: 32px;
+    border-radius: 10%;
+    cursor:pointer;
+    border: none;
+    color: white;
+    background-color: skyblue;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'ChosunGu',sans-serif;
+    transition: background-color 0.5s;
+}
+
+#addButton:hover {
+    color:skyblue;
+}
+
+.container .goal-title{
+    width: 90%;
+    word-spacing: 7px;
+    line-height: 23px;
+    margin: 0 auto;
+    font-size: larger;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    padding: 10px 0 10px 0;
+    color: white;
+    text-shadow: -2.52px -2.5px 0 skyblue, 2.5px -2.5px 0 skyblue, -2.5px 2.5px 0 skyblue, 2.5px 2.5px 0 skyblue;
+    font-family: 'UhBeeSe_hyun',sans-serif;
+    margin-top: 50px;
+}
+.bucketlistbox{
+    width: 16.3%;
+    height:  13%;
+    background-color:white;
+    border-radius: 5%;
+    position: absolute;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    overflow-y: scroll;
+}
+
+.bucketlistbox ol {
+    list-style-type: decimal; /* 입력 순서에 따라 번호로 표시 */
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  .bucketlistbox ol {
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    padding-left: 20px;
+  }
+  
+  .bucketlistbox li {
+    counter-increment: bucket-counter; /* 목록 카운터 증가 */
+    position: relative;
+    padding-left: 28px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+
+  .bucketlistbox li.active {
+    position: relative;
+    text-decoration: solid;
+  }
+
+
+  .bucketlistbox li::before {
+    content: counter(bucket-counter); /* 목록 카운터 표시 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    width: 20px;
+    color: white;
+    background-color: skyblue; /* 숫자 색상 */
+    border-radius: 20%;
+    text-align: center;
+  }
+
+  .bucketlistbox  li .clicked::before {
+    display: block;
+  }
+
+  .bucketlistbox li input[type="checkbox"] {
+    display: none; /* 체크박스 숨기기 */
+  }
+
+.bucketlistbox::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+.bucketlistbox::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: skyblue; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+  
+
+.completed label {
+    text-decoration: line-through;
+}
+
+.input-container{
+   margin-right: 15px;
+}
+
+.container input[type="checkbox"] {
+    margin: 5% 5% 1% 5%;
+   line-height: 25px;
+  }
+
+  .delete-button {
+    font-size: 17px;
+    background: none;
+    border: none;
+    color: #23a7db;
+    font-weight: 700;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.closed   {
+    position:   absolute;
+    top:   5%;   right:   5%;   
+    width:   40px;   
+    height:   40px;
+    font-size:   0;
+    background:   none;
+    border:   none;
+}
+.closed::after,   .closed::before   {
+    content:   '';
+    position:   absolute;
+    top:   14%;   right:   44%;
+    width:   3px;
+    height:   25px;
+    background:   #fff;}
+
+.listText   {
+    position:   absolute;
+    top:   50%;
+    left:   50%;
+    transform:   translate(-50%,   -50%);
+    word-break:break-all;
+    width:   70%;
+    font-size:   20px;
+    color:   #fff;
+}
+.createDate   {
+    position:   absolute;
+    bottom:   7%;
+    right:   7%;
+    font-size:   20px;
+    color:   #e4e4e4;
+}
+.bgblack {
+    display: none;
+    background:   #acacac;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.calendar-body > #weekly > div:not(:empty) {
+    cursor: pointer;
+    
+}
+
+.calendar-body > #weekly > div.active {
+    text-decoration: underline;
+}

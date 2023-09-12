@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "UhBeeSe_hyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url("https://pixabay.com/get/gb28739f8f112e602f9622ee902896fd5580212e543e15d3a21966b5a1bd782cd1129fb5c776ffd731213062eb20d24515a9d92f1501fa938ba3fec807ecf8844704a13d24d0aabfc6d6c9f53c066c1d0_1280.jpg");
+  font-family: "UhBeeSe_hyun";
+  flex-direction: column;
+}
+
+.weather-image {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  vertical-align: middle;
+  padding-left: 3px;
+}
+
+.weather-image {
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.weather-image.clicked {
+  filter: none;
+}
+
+.title input[type="text"]:focus {
+  outline: none; /* 클릭 시 포커스 테두리 제거 */
+}
+
+#day:focus {
+  outline: none; /* 클릭 시 포커스 테두리 제거 */
+}
+
+.wpahr .weather-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.wpahr {
+  width: 540px;
+  height: fit-content;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  height: 50px;
+  justify-content: center;
+  align-self: center;
+}
+
+label[for="date"] {
+  /* 스타일을 여기에 추가하세요 */
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  font-family: "UhBeeSe_hyun";
+  font-size: 16px;
+}
+/* 이거 바꿈 김지원 */
+button.submit {
+  font-size: 16px;
+  padding: 0px;
+  border-radius: 8px;
+  background: rgb(223, 222, 222);
+  width: 60px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input.real-upload {
+  font-size: 16px;
+  padding: 0px;
+}
+input.cancel {
+  width: 110px;
+  font-size: 16px;
+  padding: 0px;
+  border-radius: 8px;
+  background: rgb(223, 222, 222);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  font-family: "UhBeeSe_hyun";
+  font-size: 16px;
+}
+textarea#texts {
+  padding: 10px;
+}
+
+textarea#texts {
+  padding: 10px;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  size: 10px;
+  border: 2px solid;
+}
+
+/* 캔버스 크기 바꿀 때 js도 같이 바꾸기  */
+.canvas {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+}
+
+#jsColors {
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
+canvas#jsCanvas {
+  /*컨버스 크기*/
+  width: 420px;
+  padding: 60px;
+  border: 3px double grey;
+}
+
+.controls {
+  margin-left: 20px;
+}
+
+.controls {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: 100px;
+  width: 300px;
+}
+
+.design {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.cavnas .controls {
+  display: inline;
+}
+.controls .controls__btns {
+  margin-bottom: 20px;
+  writing-mode: vertical-lr;
+}
+
+.controls__btns button {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0px;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  margin-top: 5px;
+}
+#jsSave {
+  width: 100px;
+}
+
+#jsRange {
+  margin-left: 30px;
+}
+
+.controls__btns button:active {
+  transform: scale(0.98);
+}
+
+.controls .controls__colors {
+  display: flex;
+  /* height: 200px; */
+  align-items: center;
+  height: 100%;
+}
+
+.controls__colors .controls__color {
+  width: 25px;
+  height: 25px;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+}
+
+.controls .controls__range {
+  margin-bottom: 15px;
+  display: flex;
+  vertical-align: center;
+}
+
+.controls__btns {
+  margin-left: 310px;
+}
+
+#jsErase {
+  margin-right: 15px;
+}
+
+#label {
+  font-size: 20px;
+}
+
+div#title {
+  font-size: 20px;
+  border: 2px solid black;
+  border-bottom: none;
+  width: 540px;
+}
+
+textarea {
+  border: 2px solid black;
+  font-family: "UhBeeSe_hyun";
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 16px;
+  line-height: 50px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 50px; /* 원하는 너비로 설정 */
+  height: auto; /* 높이를 자동으로 조정하여 비율을 유지 */
+  display: inline-block;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-container {
+  display: flex;
+}
+
+.weather-container h2 {
+  margin-right: 10px;
+}
+#lable.weather-container {
+  display: inline-block;
+}
+/* 버튼 */
+.btn-upload {
+  width: 150px;
+  height: 30px;
+  background: rgb(223, 222, 222);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: rgb(77, 77, 77);
+    color: #fff;
+  }
+}
+
+intpu#file {
+  display: none;
+}
+
+.submit,
+.cancel,
+.btn-upload {
+  margin-top: 4px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-upload {
+  text-align: center;
+}
+
+.button-save {
+  margin-top: -35px;
+  float: right;
+}
+
+/* 날짜 버튼 */
+
+.toggle3 input[type="radio"] {
+  display: none;
+}
+.toggle3 input[type="radio"] + label {
+  cursor: pointer;
+  vertical-align: middle;
+  /* padding-left: 3px; */
+  color: #e0e0e0;
+}
+.toggle3 input[type="radio"]:checked + label {
+  color: #000;
+}

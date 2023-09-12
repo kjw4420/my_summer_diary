@@ -1,0 +1,68 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    <title>Painting</title>
+</head>
+ <body>
+     <div class="wpahr">
+          <div class="floatR">
+               <!-- 제목 -->
+               <!--오늘 날짜 : 변수가져오기, 허용하는 가장 늦은날짜, 허용하는 가장 이른 날짜-->
+               <label for="date">날짜:{{diary.date}}   </label>
+               {% comment %} <input type="date" id="day" style="width: 160px; height: 50px; font-size:17px "name="trip-start"> {% endcomment %}
+               <!--value="2018-11-10" min="2018-01-01" max="2018-12-31"-->
+               <div id="circleShape" class="circle-shape" style="display: none;"></div>
+               <!-- 날씨 -->
+               <label for="weather" id="weather">날씨: {{diary.weather}}</label>
+                    <img src="{% get_static_prefix %}img/{{diary.weather}}.png" alt="날씨" class="weather-image" id="{{diary.weather}}" value="{{diary.weather}}">
+               <!-- 저장 -->
+          </div>
+          <div id="circleShape" class="circle-shape" style="display: none;"></div>
+     </div>
+          
+
+     </div>
+     <!-- 그림판 -->
+     <div class ="design">
+               <div class="canvas-container">
+                    {% if diary.image %}
+                    <div class="canvas-wrapper" style="  width: 420px; padding: 60px; border: 3px double grey;">
+                      <img src="{{diary.image.url}}" alt="위의 이미지를 누르면 연결됩니다." style="width: 100%; height: 100%"/>
+                         </div>
+                         {% endif %}
+                          {% if diary.drawing %}
+                           <div class="canvas-wrapper" style="  width: 420px; padding: 60px; border: 3px double grey;">
+                   
+                      <img src="{{diary.drawing.url}}" alt="위의 이미지를 누르면 연결됩니다." style="width: 100%; height: 100%"/>
+                    </div>
+                         {% endif %} 
+
+              
+                    <div class="controls__btns">
+                         <!-- <button id="jsErase">그림 지우기</button>
+                         <button id="jsSave">그림 저장하기</button></div> -->
+                    </div>
+               </div>
+     </div>
+     <div id ="title"class=" title">
+     
+          <label for="title"><span style="margin-right: 10px;"></span>제목:{{diary.title}}</label>  
+          {% comment %} <input type="text" name="title" id="title" placeholder=""style="width: 450px; height: 50px; font-size: 20px; padding-left: 10px;" maxLength=""> {% endcomment %}
+     </div>
+     <!-- 내용 -->
+     <div id="text" class="text">
+          <div id="textview" style=" border: 2px solid black; width: 540px; height: 300px; font-size:20px"> {{diary.content}} <div>
+          {% comment %} <textbox name="내용" id="texts" placeholder="글을 적어주세요" style="width: 520px; height: 300px; font-size:20px">{{diary.content}}</textbox> {% endcomment %}
+     </div>
+
+
+     </div>
+     <script src="{%static 'js/app.js'%}">
+     </script>
+</body>
+</html>
