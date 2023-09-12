@@ -13,7 +13,7 @@
  ✔️ 그림일기로 오늘을 되돌아보기<br><br>
 
 
-<img width="811" alt="스크린샷 2023-07-17 오전 1 47 55" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/10050cc3-f7cb-43ef-81f2-27dab6a322cc"><br>
+<img width="918" alt="스크린샷 2023-07-17 오전 1 47 55" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/10050cc3-f7cb-43ef-81f2-27dab6a322cc"><br>
 <img width="918" alt="스크린샷 2023-07-17 오전 2 33 20" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/b4d3d7e2-4b26-492e-9d32-300f2b2a1885"><br>
 <img width="918" alt="스크린샷 2023-07-17 오전 2 33 30" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/dbea4fa4-09dc-424a-91de-bdeaf3792500"><br>
 
