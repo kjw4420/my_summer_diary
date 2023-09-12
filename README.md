@@ -8,9 +8,9 @@
 <br>
 
 **나의 알찬 여름 방학 보내는 법** ❗️  <br>
- ✔️ To Do List로 오늘의 할 일 기록 <br>
- ✔️ Summer Bucket List로 여름방학 기간 동안 하고 싶은 일 기록  <br>
- ✔️ 그림일기로 오늘을 되돌아보기<br><br>
+ ✔️ **To Do List**로 오늘의 할 일 기록 <br>
+ ✔️ **Summer Bucket List**로 여름방학 기간 동안 하고 싶은 일 기록  <br>
+ ✔️ **그림일기**로 오늘을 되돌아보기<br><br>
 
 
 <img width="918" alt="스크린샷 2023-07-17 오전 1 47 55" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/10050cc3-f7cb-43ef-81f2-27dab6a322cc"><br>
@@ -66,7 +66,7 @@
 
 **언어**<br>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
- <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white"/>
+ <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white"/><br><br>
 **프레임워크/라이브러리**<br>
 <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white"/> <br>
 
