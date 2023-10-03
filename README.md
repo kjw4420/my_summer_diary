@@ -47,7 +47,7 @@
 |               | github                             |
 | ------------- | ---------------------------------- |
 | 김지원  |https://github.com/kjw4420    |
-| 조서현        |         |
+| 조서현        |  https://github.com/westnowise       |
 
 ### 디자인
 
