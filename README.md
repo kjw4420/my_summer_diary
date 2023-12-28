@@ -89,8 +89,24 @@ function handleSaveClick() {
 
 <div align="center">
 Blob 생성 자바스크립트 코드
-</div>
+</div><br>
 
+<div align="center">
+<img width="140" alt="스크린샷 2023-09-12 오전 1 16 13" src="https://github.com/kjw4420/my_summer_diary/assets/97749184/b04910e4-fe6a-421d-842d-fa2d09816058"><br>
+ DB에 drawing 저장
+</div><br>
+
+```html
+{% if diary.drawing %}
+		   <div class="canvas-wrapper" style="  width: 420px; padding: 60px; border: 3px double grey;">
+			 <img src="{{diary.drawing.url}}" alt="위의 이미지를 누르면 연결됩니다." style="width: 100%; height: 100%"/>
+	     </div>
+ {% endif %}
+ ```
+
+<div align="center">
+ Html 파일에서 drawing 뽑기
+</div>
 
 
 ## 👩🏻‍💻 멤버
@@ -133,6 +149,6 @@ Blob 생성 자바스크립트 코드
 <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white"/> <br>
 
 **데이터베이스**<br>
-<img src="https://img.shields.io/badge/Sqlite-003B57?style=for-the-badge&logo=Sqlite&logoColor=white">
+<img src="https://img.shields.io/badge/Sqlite-003B57?style=flat-square&logo=Sqlite&logoColor=white">
 
 
