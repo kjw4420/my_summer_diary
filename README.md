@@ -53,7 +53,42 @@
  ✔️**다이어리 쓰기:**<br>
 -날짜, 날씨, 그림, 사진, 글을 기록하여 **짧은 일기**를 쓴다.<br><br>
 
+## :bookmark_tabs: 문제해결: 팀원의 이탈
+프로젝트 도중 프론트엔드 역할 팀원이 갑작스럽게 이탈하는 상황이 발생했습니다. 팀 내 분위기가 떨어지고 결과물에도 영향이 생겼습니다. 프로젝트 발표 기한을 지키지 못할 것이라고 판단했고, 빠른 대응이 필요했습니다.
 
+저는 팀원들을 소집하여 인터뷰를 진행했습니다. 프로젝트를 통해 이루고자 하는 목표와 현재 진행 상황에 대해 이야기를 나누었습니다. 팀원들은 공통적인 목표로 '팀 프로젝트 발표 순위권'을 말했고, 문제는 결과물의 부진에서 비롯된 것이라고 이야기했습니다. 이 악순환을 끊고 목표를 이루기 위해서는, 남아있는 팀원들이 얼마나 열심히 하는가에 대한 **자극**과 눈에 보이는 **결과물**이 필요하다고 생각했습니다.
+
+그래서 ‘우리만의 해커톤’을 제안하여 문제 해결을 시도했습니다. 해커톤은 짧은 시간 안에 빠른 성과를 내기에 적합하다고 생각했고, 이를 통해 즉각적인 결과물을 얻을 수 있을 뿐 아니라, 팀워크를 강화할 수 있다고 판단했습니다. 팀원들은 제 의견에 동의했고, 해커톤 수행 결과 하루 만에 전체 프로젝트 목표의 80%를 완수할 수 있었습니다. 또 기한 내에 프로젝트를 완성해  Hanseo Univ. 팀 프로젝트에서 2위의 성과를 이뤄냈습니다.
+
+이 프로젝트를 통해 팀워크의 중요성을 재확인하게 되었으며, 문제 발생 시 적극적인 대처와 해결책 모색이 전체 결과물에 큰 영향을 미친다는 것을 배웠습니다.
+
+## :bookmark_tabs: Canvas 그림 파일 저장
+- 사용자가 Canvas에 그린 그림을 png 이미지로 저장 후, Blob 파일로 변환하여 DB 저장
+- Blob: 이진 데이터로 이미지, 오디오, 비디오 등 다른 타입에 비해 용량이 큰 데이터들을 상대적으로 크기가 작은 이진 데이터로 변환하여 전달 및 관리함.
+  ```javascript
+  function handleSaveClick() {
+  var image = canvas.toDataURL("image/png"); //문자열 반환
+
+  var blobBin = atob(image.split(",")[1]); // base64 데이터 디코딩
+  var array = [];
+  for (var i = 0; i < blobBin.length; i++) {
+    array.push(blobBin.charCodeAt(i));
+  }
+  var file = new Blob([new Uint8Array(array)], { type: "image/png" }); // Blob 생성
+  var dataForm = document.getElementById("form");
+  var formData = new FormData(dataForm);
+  formData.append("drawing", file); // file data 추가
+
+  fetch("insert/", {
+    method: "POST",
+    body: formData,
+  });
+
+}
+```
+<div align="center">
+Blob 생성 자바스크립트 코드
+</div>
 ## 👩🏻‍💻 멤버
 
 
