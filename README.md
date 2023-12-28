@@ -65,8 +65,8 @@
 ## :bookmark_tabs: Canvas 그림 파일 저장
 - 사용자가 Canvas에 그린 그림을 png 이미지로 저장 후, Blob 파일로 변환하여 DB 저장
 - Blob: 이진 데이터로 이미지, 오디오, 비디오 등 다른 타입에 비해 용량이 큰 데이터들을 상대적으로 크기가 작은 이진 데이터로 변환하여 전달 및 관리함.
-  ```javascript
-  function handleSaveClick() {
+```js
+function handleSaveClick() {
   var image = canvas.toDataURL("image/png"); //문자열 반환
 
   var blobBin = atob(image.split(",")[1]); // base64 데이터 디코딩
@@ -86,9 +86,13 @@
 
 }
 ```
+
 <div align="center">
 Blob 생성 자바스크립트 코드
 </div>
+
+
+
 ## 👩🏻‍💻 멤버
 
 
